@@ -14,7 +14,8 @@ export function FormBox() {
     firestore().collection('products').add({
       description,
       quantity,
-      done: false
+      done: false,
+      createdAt: firestore.FieldValue.serverTimestamp()
     }).then(() => {
       Alert.alert('Produto adicionado com sucesso')
     }).catch((error) => console.log(error))

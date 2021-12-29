@@ -10,6 +10,7 @@ import {File, FileProps} from '../../components/File';
 export function Receipts() {
   const [photos, setPhoto] = useState<FileProps[]>([])
   const [photoSelected, setPhotoSelected] = useState('')
+  const [photInfo, setPhotoInfo] = useState('')
 
   useEffect(() => {
     storage().ref('images').list().then(result => {
@@ -28,6 +29,9 @@ export function Receipts() {
   async function handleShowImage(path: string) {
     const urlImage = await storage().ref(path).getDownloadURL();
     setPhotoSelected(urlImage)
+
+    const info = await storage().ref(path).getMetadata()
+    setPhotoInfo(`Upload realizado em ${info.timeCreated}`)
   }
 
   return (
@@ -37,7 +41,7 @@ export function Receipts() {
       <Photo uri={photoSelected} />
 
       <PhotoInfo>
-        Informações da foto
+        {photInfo}
       </PhotoInfo>
 
       <FlatList

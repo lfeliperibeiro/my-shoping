@@ -25,7 +25,7 @@ export function Header({ title, showLogoutButton = false }: Props) {
         <ButtonIcon
           icon="logout"
           color="alert"
-          style={{ marginTop: 20 }}
+          style={{ marginTop: 30 }}
           onPress={handleLogout}
         />
       }

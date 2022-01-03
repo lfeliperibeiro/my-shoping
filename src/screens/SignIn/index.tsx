@@ -40,10 +40,8 @@ export function SignIn() {
       .then(({user}) => console.log(user))
      .catch((error) => {
        console.log(error.code)
-       if(error.code === 'auth/user-not-found'){
-         return Alert.alert('usuário não existe')
-       }else if(error.code === 'auth/wrong-password'){
-         return Alert.alert('senha incorreta')
+       if(error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password'){
+         return Alert.alert('E-mail e/ou senha incorreta')
        }
      })
 

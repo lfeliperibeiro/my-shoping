@@ -44,7 +44,11 @@ export function SignIn() {
          return Alert.alert('E-mail e/ou senha incorreta')
        }
      })
+  }
 
+  function handleForgotPassword() {
+    auth().sendPasswordResetEmail(email)
+      .then(() => Alert.alert('enviamos um link para o seu email'))
   }
 
   return (
@@ -68,7 +72,7 @@ export function SignIn() {
       <Button title="Entrar" onPress={handleSignInWithEmailAndPassword} />
 
       <Account>
-        <ButtonText title="Recuperar senha" onPress={() => { }} />
+        <ButtonText title="Recuperar senha" onPress={handleForgotPassword} />
         <ButtonText title="Criar minha conta" onPress={handleCreateUserAccount} />
       </Account>
     </Container>

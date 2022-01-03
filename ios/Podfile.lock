@@ -741,7 +741,7 @@ PODS:
   - RNFBApp (14.1.0):
     - Firebase/CoreOnly (= 8.10.0)
     - React-Core
-  - RNFBAuth (14.1.0):
+  - RNFBAuth (14.2.1):
     - Firebase/Auth (= 8.10.0)
     - React-Core
     - RNFBApp
@@ -1030,7 +1030,7 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: a9904c6d0218fb9f8b19d6dd88607225927668f9
   ReactCommon: 149906e01aa51142707a10665185db879898e966
   RNFBApp: e884e9a2dcc5edfa73e2651ef6638df5e0672f89
-  RNFBAuth: fd6cbf93302641dbe20045a44e64c1fa3d4eff02
+  RNFBAuth: 8a2d139824431757f1a6b71a8d086cb104e56a0d
   RNFBFirestore: 335dcbdb91786a892dd76831373f9794ac947e3b
   RNFBStorage: 77eafd785a3a2d4e4ceaac707ebc1abe57537773
   RNGestureHandler: a479ebd5ed4221a810967000735517df0d2db211
